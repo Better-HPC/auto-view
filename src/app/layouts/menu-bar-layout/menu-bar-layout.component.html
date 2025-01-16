@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <span>{{ title }}</span>
+  <span class="menu-spacer"></span>
+  <button aria-label="logout button" style="display: none" mat-icon-button>
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<main>
+  <div class="content-wrapper">
+    <router-outlet/>
+  </div>
+</main>
+
+<footer class="footer">
+  <app-version-tag></app-version-tag>
+</footer>

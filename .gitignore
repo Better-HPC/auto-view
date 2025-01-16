@@ -1,0 +1,26 @@
+# Compiled output
+/dist
+
+# Node
+/node_modules
+npm-debug.log
+
+# IDEs and editors
+.idea/
+.editorconfig
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+.angular
+.sass-cache/
+
+# System files
+.DS_Store
+Thumbs.db
