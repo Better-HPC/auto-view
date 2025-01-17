@@ -1,7 +1,7 @@
 <mat-toolbar>
-  <span>{{ title }}</span>
+  <span class="logo" routerLink="/">{{ (title$ | async) || 'Auto-REST' }}</span>
   <span class="menu-spacer"></span>
-  <button aria-label="logout button" style="display: none" mat-icon-button>
+  <button aria-label="logout button" mat-icon-button style="display: none">
     <mat-icon>logout</mat-icon>
   </button>
 </mat-toolbar>

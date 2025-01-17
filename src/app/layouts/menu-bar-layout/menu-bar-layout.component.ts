@@ -1,23 +1,35 @@
-import { Component } from "@angular/core";
+import { AsyncPipe } from "@angular/common";
+import { Component, OnInit } from "@angular/core";
 import { MatIconButton } from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
 import { MatToolbar } from "@angular/material/toolbar";
-import { RouterOutlet } from "@angular/router";
+import { RouterLink, RouterOutlet } from "@angular/router";
 
-import { VersionTag } from "../../common/components/version-tag/version-tag.component";
+import { Observable } from "rxjs";
+
+import { VersionTag } from "~components/version-tag/version-tag.component";
+import { DataService } from "~services/data/data.service";
 
 @Component({
   standalone: true,
+  templateUrl: "menu-bar-layout.component.html",
+  styleUrl: "menu-bar-layout.component.scss",
   imports: [
+    AsyncPipe,
     MatIcon,
     MatIconButton,
     MatToolbar,
     RouterOutlet,
     VersionTag,
+    RouterLink,
   ],
-  templateUrl: "menu-bar-layout.component.html",
-  styleUrl: "menu-bar-layout.component.scss"
 })
-export class MenuBarLayoutComponent {
-  title = "Auto View";
+export class MenuBarLayoutComponent implements OnInit {
+  public title$!: Observable<string>;
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.title$ = this.dataService.getTitle();
+  }
 }
