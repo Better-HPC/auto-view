@@ -1,19 +1,19 @@
 import { AsyncPipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
-import { Observable, of } from "rxjs";
+import { Observable } from "rxjs";
 
-import { DataService } from "../../services/data/data.service";
+import { DataService } from "~services/data/data.service";
 
 @Component({
   standalone: true,
   selector: "app-version-tag",
+  templateUrl: "version-tag.component.html",
   imports: [
     AsyncPipe
   ],
-  templateUrl: "version-tag.component.html",
 })
 export class VersionTag implements OnInit {
-  version$: Observable<string> = of("");
+  version$!: Observable<string>;
 
   constructor(private dataService: DataService) {}
 
