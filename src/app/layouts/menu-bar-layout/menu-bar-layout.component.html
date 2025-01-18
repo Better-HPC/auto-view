@@ -1,15 +1,15 @@
-<mat-toolbar>
-  <span class="logo" routerLink="/">{{ (title$ | async) || 'Auto-REST' }}</span>
-  <span class="menu-spacer"></span>
-  <button aria-label="logout button" mat-icon-button style="display: none">
-    <mat-icon>logout</mat-icon>
-  </button>
-</mat-toolbar>
+<header>
+  <mat-toolbar>
+    <span class="logo" routerLink="/">{{ (title$ | async) || 'Auto-REST' }}</span>
+    <span class="menu-spacer"></span>
+    <button aria-label="logout button" mat-icon-button style="display: none">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+</header>
 
-<main>
-  <div class="content-wrapper">
-    <router-outlet/>
-  </div>
+<main class="main-content">
+  <router-outlet/>
 </main>
 
 <footer class="footer">

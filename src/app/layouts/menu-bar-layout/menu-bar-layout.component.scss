@@ -1,22 +1,36 @@
-.logo {
-  cursor: pointer;
+:host {
+  display:        flex;
+  flex-direction: column;
+  height:         100vh;
 }
 
-.menu-spacer {
-  flex: 1 1 auto;
+.mat-toolbar {
+  background-color: #1976d2;
+  color:            white;
+
+  .logo {
+    cursor:      pointer;
+    font-size:   1.5rem;
+    font-weight: bold;
+  }
+
+  .menu-spacer {
+    flex: 1;
+  }
+
+  .mat-icon {
+    color: white;
+  }
 }
 
-.content-wrapper {
-  margin-left:  auto;
-  margin-right: auto;
-  padding:      15px;
-  text-align:   center;
-  width:        100%;
+.main-content {
+  background-color: #f9f9f9;
+  flex:             1;
+  padding:          16px clamp(16px, 5%, 64px);
 }
 
 .footer {
-  bottom:   0;
-  padding:  16px;
-  position: fixed;
-  right:    0;
+  background-color: #f9f9f9;
+  padding:          15px;
+  text-align:       right;
 }

@@ -12,6 +12,7 @@ import { DataService } from "~services/data/data.service";
 
 @Component({
   standalone: true,
+  selector: "app-menu-bar-layout",
   templateUrl: "menu-bar-layout.component.html",
   styleUrl: "menu-bar-layout.component.scss",
   imports: [
@@ -29,7 +30,7 @@ export class MenuBarLayoutComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.title$ = this.dataService.getTitle();
   }
 }

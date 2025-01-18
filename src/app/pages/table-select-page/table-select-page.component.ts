@@ -10,6 +10,7 @@ import { DataService } from "~services/data/data.service";
   standalone: true,
   selector: "table-select-page",
   templateUrl: "table-select-page.component.html",
+  styleUrl: "table-select-page.component.scss",
   imports: [
     AsyncPipe,
     TblSelectFormComponent,
