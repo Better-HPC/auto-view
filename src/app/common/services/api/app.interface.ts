@@ -11,9 +11,13 @@ export interface SchemaColumn {
 }
 
 export interface SchemaTable {
-  columns: { [key: string]: SchemaColumn };
+  columns: {
+    [key: string]: SchemaColumn
+  };
 }
 
 export interface Schema {
-  [key: string]: SchemaTable;
+  tables: {
+    [key: string]: SchemaTable
+  };
 }
