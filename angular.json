@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "auto-view-web": {
+    "auto-view": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/auto-view-web",
+            "outputPath": "dist/auto-view",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "auto-view-web:build:production"
+              "buildTarget": "auto-view:build:production"
             },
             "development": {
-              "buildTarget": "auto-view-web:build:development"
+              "buildTarget": "auto-view:build:development"
             }
           },
           "defaultConfiguration": "development"
