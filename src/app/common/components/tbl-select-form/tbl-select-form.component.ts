@@ -18,7 +18,7 @@ export interface TblSelectInterface {
   standalone: true,
   selector: "app-tbl-select-form",
   templateUrl: "tbl-select-form.component.html",
-  styleUrls: ["tbl-select-form.component.scss"],
+  styleUrl: "tbl-select-form.component.scss",
   imports: [
     AsyncPipe,
     MatAutocompleteModule,
@@ -49,7 +49,7 @@ export class TblSelectFormComponent implements OnInit {
   }
 
   private initializeOptions(): void {
-    this.dataService.getSchema().subscribe(schema => this.allOptions = Object.keys(schema["tables"]));
+    this.dataService.getTableNames().subscribe(names => this.allOptions = names);
   }
 
   private initializeForm(): void {
